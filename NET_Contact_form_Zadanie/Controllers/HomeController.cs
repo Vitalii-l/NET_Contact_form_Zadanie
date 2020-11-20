@@ -10,6 +10,14 @@ namespace NET_Contact_form_Zadanie.Controllers
     {
         public ActionResult Index()
         {
+            int hour = DateTime.Now.Hour;
+
+            ViewBag.Greeting = hour < 12 ? "Tere hommikust" : "Tere päevast";
+            return View();
+        }
+
+        public ViewResult ContactForm()
+        {
             return View();
         }
 
